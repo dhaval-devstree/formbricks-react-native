@@ -1,0 +1,58 @@
+{
+  "name": "@formbricks/surveys",
+  "license": "MIT",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Formbricks-surveys is a helper library to embed surveys into your application.",
+  "homepage": "https://formbricks.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/formbricks/formbricks"
+  },
+  "sideEffects": false,
+  "source": "src/index.ts",
+  "main": "dist/index.umd.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "dev": "vite build --watch --mode dev",
+    "serve": "serve dist -p 3003",
+    "build": "tsc && vite build",
+    "build:dev": "tsc && vite build --mode dev",
+    "go": "vite build --watch --mode dev",
+    "lint": "eslint . --ext .ts,.js,.tsx,.jsx",
+    "preview": "vite preview",
+    "clean": "rimraf .turbo node_modules dist"
+  },
+  "devDependencies": {
+    "@calcom/embed-snippet": "1.2.0",
+    "@formbricks/lib": "workspace:*",
+    "@formbricks/tsconfig": "workspace:*",
+    "@formbricks/types": "workspace:*",
+    "@preact/preset-vite": "^2.8.2",
+    "autoprefixer": "^10.4.19",
+    "concurrently": "8.2.2",
+    "eslint-config-formbricks": "workspace:*",
+    "isomorphic-dompurify": "^2.7.0",
+    "postcss": "^8.4.38",
+    "preact": "^10.20.2",
+    "react-date-picker": "^10.6.0",
+    "serve": "14.2.2",
+    "tailwindcss": "^3.4.3",
+    "terser": "^5.30.4",
+    "vite": "^5.2.10",
+    "vite-plugin-dts": "^3.9.0",
+    "vite-tsconfig-paths": "^4.3.2"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "@formbricks/tsconfig/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["/*"],
+    },
+    "resolveJsonModule": true,
+  },
+  "include": [".", "../ui/Targeting/TargetingIndicator.tsx"],
+  "exclude": ["dist", "build", "node_modules"],
+}
